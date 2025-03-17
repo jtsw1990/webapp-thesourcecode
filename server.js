@@ -104,7 +104,7 @@ app.get("/projects", (req, res) => {
             title: "Bastion Labs Pty Ltd",
             photo: "/img/project_img_bl.png",
             description: "Co-founder of data consultancy company focusing on analytics education",
-            link: "https://bastion-labs.co/index",
+            link: "https://bastion-labs.co",
         },
         {
             title: "Glimpse - GenAI pipeline",
