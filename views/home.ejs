@@ -181,9 +181,61 @@
                 </div>
             </div>
         </div>
+
+        <div class="shadow-lg jumbotron mt-2">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="row">
+                        <div class="col">
+                            <h3 class="display-4">Algebraic Structures Explained</h3>
+                        </div>
+                    </div>
+                    <hr class="my-3">
+                    <div class="row">
+                        <div class="col">
+                            Ever wondered what mathematicians mean by sets, groups, rings, and fields? 
+                            These are fundamental algebraic structures that form the basis of abstract algebra 
+                            and have applications in cryptography, coding theory, and computer science.
+                            <br><br>
+                            <strong>Try it out:</strong> Enter a comma-separated list of numbers (e.g., "0,1,2,3") 
+                            and the widget will analyze whether your collection forms a set, group, ring, or field 
+                            <strong>under modular arithmetic</strong>! This means operations wrap around based on the 
+                            maximum value in your set (e.g., {0,1,2,3} uses mod 4).
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col">
+                            <label for="numberInput"><strong>Enter numbers (comma or space separated):</strong></label>
+                            <input 
+                                type="text" 
+                                id="numberInput" 
+                                class="form-control" 
+                                placeholder="e.g., 0, 1, 2, 3 or 0 1 2 3"
+                                value="0, 1, 2, 3">
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col">
+                            <button id="analyzeBtn" class="btn btn-secondary btn-sm">Analyze Structure</button>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col">
+                            <a href="/articles/feature_engineering" class="btn btn-primary btn-sm">Learn More (Coming Soon)</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div id="analysisResults" class="analysis-container">
+                        <p class="text-muted text-center">Click "Analyze Structure" to see results</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <%- include("partials/footer"); %>
 </body>
 <script src="/js/placeholder.js"></script>
 <script src="/js/slr.js"></script>
+<script src="/js/algebraic_structures.js"></script>
 </html>

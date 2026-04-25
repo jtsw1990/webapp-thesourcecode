@@ -323,3 +323,69 @@ body {
   background-color: #046293;
   border-color: #046293;
 }
+
+/* Algebraic Structures Widget Styles */
+.analysis-container {
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  padding: 20px;
+  min-height: 300px;
+  font-size: 0.95rem;
+}
+
+.structure-analysis {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.structure-analysis h5 {
+  margin: 0;
+  color: #333;
+  font-weight: 600;
+}
+
+.structure-analysis p {
+  margin: 5px 0;
+}
+
+.structure-analysis hr {
+  margin: 10px 0;
+}
+
+.structure-result {
+  padding: 12px;
+  border-left: 4px solid #ccc;
+  background-color: #fff;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+.structure-result.valid {
+  border-left-color: #28a745;
+  background-color: #f0f8f5;
+}
+
+.structure-result.invalid {
+  border-left-color: #dc3545;
+  background-color: #fdf5f7;
+}
+
+.structure-result strong {
+  font-size: 1.05rem;
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.structure-result .small {
+  display: block;
+  margin-top: 5px;
+}
+
+#numberInput {
+  font-size: 0.95rem;
+  padding: 8px 12px;
+}
+}
