@@ -1,5 +1,11 @@
 [
     {
+        "title": "Applicable AI",
+        "photo": "/img/article_img_applicableai.png",
+        "description": "Bastion Labs",
+        "link": "https://www.bastion-labs.co/post/applicable-ai"
+    },
+    {
         "title": "Visualising Data",
         "photo": "/img/article_img_viz.png",
         "description": "Actuaries Digital",

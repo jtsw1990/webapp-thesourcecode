@@ -55,6 +55,7 @@ body {
   text-align: center;
   padding: 20px;
   box-sizing: border-box;
+  pointer-events: none;
 }
 
 .embed-hover:hover .overlay {
