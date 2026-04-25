@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('partials/head') %>
+    <title>500 - Server Error</title>
+</head>
+<body>
+    <%- include('partials/navbar') %>
+    
+    <main class="container" style="text-align: center; padding: 60px 20px;">
+        <h1 style="font-size: 4rem; margin: 0; color: #e74c3c;">500</h1>
+        <h2 style="font-size: 2rem; margin: 20px 0; color: #333;">Server Error</h2>
+        <p style="font-size: 1.1rem; color: #666; margin-bottom: 30px;">
+            Something went wrong on our end. We're working to fix it.
+        </p>
+        <% if (typeof error !== 'undefined') { %>
+            <details style="text-align: left; display: inline-block; background-color: #f5f5f5; padding: 15px; border-radius: 5px; margin-bottom: 30px;">
+                <summary style="cursor: pointer; font-weight: bold; color: #666;">Error Details</summary>
+                <pre style="margin-top: 10px; overflow-x: auto; color: #c33;"><%= error %></pre>
+            </details>
+        <% } %>
+        <a href="/home" class="btn" style="display: inline-block; padding: 12px 30px; background-color: #3498db; color: white; text-decoration: none; border-radius: 5px; font-weight: bold;">
+            Go Back Home
+        </a>
+    </main>
+
+    <%- include('partials/footer') %>
+</body>
+</html>

@@ -4,7 +4,7 @@ if (process.env.NODE_ENV !== "production") {
 
 const path = require("path");
 const express = require("express");
-const port = process.env.PORT;
+const port = process.env.PORT || 3000;
 const app = express();
 const favicon = require('serve-favicon');
 
@@ -15,10 +15,6 @@ app.use(express.static(path.join(__dirname, "public")));
 
 // middleware for serving favicon
 app.use(favicon(path.join(__dirname, "public", "img", "favicon.ico")));
-
-app.listen(port, () => {
-    console.log(`Listening on port ${port}`);
-})
 
 
 app.get("/", (req, res) => {
@@ -37,43 +33,43 @@ app.get("/articles", (req, res) => {
     const articles = [
         {
             title: "Visualising Data",
-            photo: "img/article_img_viz.png",
+            photo: "/img/article_img_viz.png",
             description: "Actuaries Digital",
             link: "https://www.actuaries.digital/2024/11/12/visualising-data/"
         },
         {
             title: "Explainable ML: A peek into the black box through SHAP",
-            photo: "img/article_img_shap.jpg",
+            photo: "/img/article_img_shap.jpg",
             description: "Actuaries Digital",
             link: "https://www.actuaries.digital/2021/02/05/explainable-ml-a-peek-into-the-black-box-through-shap/"
         },
         {
             title: "Git version control, because the Recycle Bin doesn’t count",
-            photo: "img/article_img_git.png",
+            photo: "/img/article_img_git.png",
             description: "Actuaries Digital",
             link: "https://www.actuaries.digital/2019/04/17/analytics-snippet-version-control-because-the-recycle-bin-doesnt-count/"
         },
         {
             title: "Natural Language Processing Text Classification",
-            photo: "img/article_img_nlp.png",
+            photo: "/img/article_img_nlp.png",
             description: "Actuaries Digital",
             link: "https://www.actuaries.digital/2018/11/20/analytics-snippet-natural-language-processing-text-classification/"
         },
         {
             title: "The Simple Linear Regression Guide",
-            photo: "img/article_img_slr.png",
+            photo: "/img/article_img_slr.png",
             description: "In-depth dive into simple linear regression, including mathematics and assumptions...",
             link: "/articles/linear_regression"
         },
         {
             title: "Feature Engineering Explained",
-            photo: "img/article_img_feng.png",
+            photo: "/img/article_img_feng.png",
             description: "An introduction to the why and how of feature engineering, with visual representation...",
             link: "/articles/feature_engineering"
         },
         {
             title: "Introduction to Goodness of Fit",
-            photo: "img/article_img_gof.png",
+            photo: "/img/article_img_gof.png",
             description: "Notebook tutorials on fitting and evaluating distributions...",
             link: "https://github.com/jtsw1990/stats-goodness-of-fit-tutorial"
         }
@@ -154,4 +150,23 @@ app.get("/sitemap", (req, res) => {
     res.render("sitemap", {
         currentPage: req.originalUrl
     });
-})
+});
+
+// 404 handler - catch all undefined routes
+app.use((req, res) => {
+    res.status(404).render("404", {
+        currentPage: req.originalUrl
+    });
+});
+
+// Error handling middleware
+app.use((err, req, res, next) => {
+    console.error(err.stack);
+    res.status(500).render("500", {
+        error: process.env.NODE_ENV === "production" ? "Internal Server Error" : err.message
+    });
+});
+
+app.listen(port || 3000, () => {
+    console.log(`Listening on port ${port || 3000}`);
+});
