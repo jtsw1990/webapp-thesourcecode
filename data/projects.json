@@ -1,0 +1,44 @@
+[
+    {
+        "title": "Bastion Labs Pty Ltd",
+        "photo": "/img/project_img_bl.png",
+        "description": "Co-founder of data consultancy company focusing on analytics education",
+        "link": "https://bastion-labs.co"
+    },
+    {
+        "title": "Glimpse - GenAI pipeline",
+        "photo": "/img/project_img_glimpse.png",
+        "description": "Data pipeline that turns news API feeds into AI-generated images for instagram",
+        "link": "https://github.com/jtsw1990/glimpse-gpt-pipeline"
+    },
+    {
+        "title": "Net Zero CSR Dashboard",
+        "photo": "/img/project_img_viz.png",
+        "description": "Tableau dashboard that won 2023 SCOR Iron Viz and Tableau Viz of the day",
+        "link": "https://public.tableau.com/app/profile/jonathan.tan2635/viz/SCORVizGames2023-TheInsideScoop/Summary"
+    },
+    {
+        "title": "Visualizing an artificial neural network",
+        "photo": "/img/project_img_ann.png",
+        "description": "Interactive streamlit app graphing decision boundaries of a neural network",
+        "link": "https://neuralnetworkarticle-grxitjvzn5qcx69ypbkdbz.streamlit.app/"
+    },
+    {
+        "title": "Cult by JTLabs",
+        "photo": "/img/project_img_nft.png",
+        "description": "Collection of NFTs that are hand drawn and layered through a javascript engine",
+        "link": "https://opensea.io/collection/cult-by-jtlabs"
+    },
+    {
+        "title": "nojutsu.io: digital platform for tutors and students",
+        "photo": "/img/project_img_nj.png",
+        "description": "Web app built on Node.js and deployed on Digital Ocean for tutors and students to connect and offer services.",
+        "link": "https://github.com/jtsw1990/tutor_website"
+    },
+    {
+        "title": "Grab AI for S.E.A 2019 Competition",
+        "photo": "/img/project_img_grab.jpg",
+        "description": "Grab challenged participants in 2019 to come up with solutions on how AI and their data can be used to solve problems in SEA.",
+        "link": "https://github.com/jtsw1990/grab-ai-safety"
+    }
+]
