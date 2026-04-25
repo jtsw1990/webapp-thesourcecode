@@ -232,10 +232,63 @@
                 </div>
             </div>
         </div>
+
+        <div class="shadow-lg jumbotron mt-2">
+            <div class="row">
+                <div class="col-sm-6">
+                    <canvas id="unitCircleCanvas" width="250" height="250" style="border: 1px solid #ddd; border-radius: 4px;"></canvas>
+                </div>
+                <div class="col-sm-6">
+                    <div class="row">
+                        <div class="col">
+                            <h3 class="display-4">Trigonometric Identities</h3>
+                        </div>
+                    </div>
+                    <hr class="my-3">
+                    <div class="row">
+                        <div class="col">
+                            Trigonometric functions are fundamental in mathematics and have countless real-world 
+                            applications in physics, engineering, and signal processing. Understanding the relationships 
+                            between sin, cos, and tan is crucial for mastering trigonometry.
+                            <br><br>
+                            <strong>Try it out:</strong> Enter an angle in degrees or radians and see how sin, cos, and tan 
+                            behave. The widget visualizes the angle on the unit circle and verifies key trigonometric identities!
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col">
+                            <label for="angleSlider"><strong>Adjust Angle:</strong></label>
+                            <div class="slider-container">
+                                <input 
+                                    type="range" 
+                                    id="angleSlider" 
+                                    class="slider trig-slider"
+                                    min="0" 
+                                    max="360" 
+                                    step="1"
+                                    value="45">
+                                <span id="angleDisplay" class="slider-value">45°</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="shadow-lg jumbotron mt-2">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div id="trigResults" class="trig-results-container">
+                        <p class="text-muted text-center">Enter an angle and click "Analyze" to see results</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <%- include("partials/footer"); %>
 </body>
 <script src="/js/placeholder.js"></script>
 <script src="/js/slr.js"></script>
 <script src="/js/algebraic_structures.js"></script>
+<script src="/js/trig_identities.js"></script>
 </html>
