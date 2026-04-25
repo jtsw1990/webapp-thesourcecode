@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include("partials/head"); %>
+    <title>Sitemap - Jonathan Tan</title>
+</head>
+
+<body>
+    <%- include("partials/navbar"); %>
+
+    <div class="container">
+        <div class="jumbotron mt-4">
+            <h1 class="display-4">Sitemap</h1>
+            <p class="lead">Complete site navigation and page directory</p>
+            <hr class="my-4">
+        </div>
+
+        <div class="row">
+            <div class="col-md-8">
+                <div class="card mb-4">
+                    <div class="card-header bg-primary text-white">
+                        <h5 class="mb-0">Main Pages</h5>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-unstyled">
+                            <li class="mb-3">
+                                <a href="/home" class="text-decoration-none">
+                                    <strong>Home</strong>
+                                </a>
+                                <p class="text-muted small mb-0">Welcome page with interactive widgets and featured content</p>
+                            </li>
+                            <li class="mb-3">
+                                <a href="/articles" class="text-decoration-none">
+                                    <strong>Articles</strong>
+                                </a>
+                                <p class="text-muted small mb-0">Collection of technical articles and tutorials</p>
+                            </li>
+                            <li class="mb-3">
+                                <a href="/projects" class="text-decoration-none">
+                                    <strong>Projects</strong>
+                                </a>
+                                <p class="text-muted small mb-0">Showcase of selected projects and professional work</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card mb-4">
+                    <div class="card-header bg-success text-white">
+                        <h5 class="mb-0">Article Pages</h5>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-unstyled">
+                            <li class="mb-3">
+                                <a href="/articles/linear_regression" class="text-decoration-none">
+                                    <strong>Simple Linear Regression Guide</strong>
+                                </a>
+                                <p class="text-muted small mb-0">In-depth dive into simple linear regression, including mathematics and assumptions</p>
+                            </li>
+                            <li class="mb-3">
+                                <a href="/articles/feature_engineering" class="text-decoration-none">
+                                    <strong>Feature Engineering Explained</strong>
+                                </a>
+                                <p class="text-muted small mb-0">An introduction to the why and how of feature engineering, with visual representation</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card mb-4">
+                    <div class="card-header bg-info text-white">
+                        <h5 class="mb-0">Interactive Widgets</h5>
+                    </div>
+                    <div class="card-body">
+                        <p class="text-muted small">The following interactive educational widgets are featured on the home page:</p>
+                        <ul class="list-unstyled">
+                            <li class="mb-2">
+                                <strong>Feature Engineering Demo</strong>
+                                <p class="text-muted small mb-0">Visualize how feature engineering transforms data in 2D and 3D space using the XOR example</p>
+                            </li>
+                            <li class="mb-2">
+                                <strong>Simple Linear Regression Widget</strong>
+                                <p class="text-muted small mb-0">Interactively adjust regression parameters and visualize the least squares fit</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card bg-light">
+                    <div class="card-header bg-secondary text-white">
+                        <h5 class="mb-0">Site Information</h5>
+                    </div>
+                    <div class="card-body">
+                        <h6>Quick Links</h6>
+                        <ul class="list-unstyled small">
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/home">About</a></li>
+                            <li><a href="/articles">Articles</a></li>
+                            <li><a href="/projects">Projects</a></li>
+                            <li><a href="/sitemap">Sitemap</a></li>
+                        </ul>
+
+                        <hr>
+
+                        <h6>For Search Engines</h6>
+                        <p class="small text-muted">An XML sitemap is also available at:</p>
+                        <p class="small">
+                            <a href="/sitemap.xml" class="text-decoration-none">
+                                <code>/sitemap.xml</code>
+                            </a>
+                        </p>
+
+                        <hr>
+
+                        <h6>Purpose</h6>
+                        <p class="small text-muted">This sitemap helps visitors and search engines navigate all available content on the site. For a complete list of all URLs, please refer to the XML sitemap.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <%- include("partials/footer"); %>
+</body>
+
+</html>

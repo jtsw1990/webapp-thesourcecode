@@ -66,6 +66,50 @@ app.get("/sitemap", (req, res) => {
     });
 });
 
+app.get("/sitemap.xml", (req, res) => {
+    res.type('application/xml');
+    const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://www.jonathattan.com/home</loc>
+        <lastmod>2026-04-25</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://www.jonathattan.com/articles</loc>
+        <lastmod>2026-04-25</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://www.jonathattan.com/articles/linear_regression</loc>
+        <lastmod>2026-04-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.jonathattan.com/articles/feature_engineering</loc>
+        <lastmod>2026-04-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.jonathattan.com/projects</loc>
+        <lastmod>2026-04-25</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://www.jonathattan.com/sitemap</loc>
+        <lastmod>2026-04-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+</urlset>`;
+    res.send(sitemapXml);
+});
+
 // 404 handler - catch all undefined routes
 app.use((req, res) => {
     res.status(404).render("404", {

@@ -1,0 +1,17 @@
+# robots.txt for Jonathan Tan's Website
+# Allow all search engine bots to crawl the site
+
+User-agent: *
+Allow: /
+
+# Sitemap location for search engines
+Sitemap: https://www.jonathattan.com/sitemap.xml
+
+# Specific rules for bots (optional)
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
