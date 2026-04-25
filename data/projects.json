@@ -1,5 +1,11 @@
 [
     {
+        "title": "Code & Grow",
+        "photo": "/img/project_img_cng.png",
+        "description": "Co-founder of education company teaching coding to kids",
+        "link": "https://www.codeandgrow.com.au/"
+    },
+    {
         "title": "Bastion Labs Pty Ltd",
         "photo": "/img/project_img_bl.png",
         "description": "Co-founder of data consultancy company focusing on analytics education",
